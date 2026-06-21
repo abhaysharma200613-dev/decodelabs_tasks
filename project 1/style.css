@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+}
+
+header{
+    background:#333;
+    color:white;
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#bbe7f5;
+}
+
+.hero button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#0004ff;
+    color:white;
+    cursor:pointer;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    padding:20px;
+    background:white;
+    border:1px solid #ddd;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+#about,#contact{
+    padding:40px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input,textarea{
+    padding:10px;
+}
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* Tablet */
+@media(max-width:768px){
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+}
